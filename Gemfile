@@ -6,9 +6,12 @@ gem 'rails', '4.0.3'
 # Assets
 gem 'haml'
 gem 'haml-rails'
+gem 'formtastic'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Authentication
+gem 'devise', '~>3.2.3'
 
 gem 'sass-rails', '~> 4.0.0'
 
