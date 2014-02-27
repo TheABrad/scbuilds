@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
+
+# Assets
 gem 'haml'
 gem 'haml-rails'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -27,6 +29,15 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+group :test do
+  gem 'capybara'
+  gem 'factory_girl_rails', '~>4.4.1'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~>3.0.0.beta'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,5 +1,9 @@
 Scbuilds::Application.routes.draw do
  
+  get "builds/index"
+  get "builds/show"
+  get "builds/new"
+  get "builds/edit"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
