@@ -1,5 +1,6 @@
 Scbuilds::Application.routes.draw do
  
+  devise_for :users
   get "builds/index"
   get "builds/show"
   get "builds/new"
