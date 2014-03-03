@@ -1,10 +1,10 @@
 Scbuilds::Application.routes.draw do
- 
+  resources :builds 
   devise_for :users
-  get "builds/index"
-  get "builds/show"
-  get "builds/new"
-  get "builds/edit"
+  
+  
+ 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
