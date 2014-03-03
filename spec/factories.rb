@@ -5,4 +5,9 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
   end
+
+  factory :build do
+    sequence(:title) { |n| "Title #{n}" }
+    body "Lorem Ipsum"
+  end
 end
