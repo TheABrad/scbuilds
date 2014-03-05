@@ -1,8 +1,14 @@
 require 'spec_helper'
 
 describe "Build Pages" do
+  let(:user) { FactoryGirl.create(:user) }
+
+  before { sign_in user }
+ 
   describe "Create a Build" do
-    before { visit new_build_path }
+    before(:all) do 
+      visit new_build_path
+    end
 
     let(:build) { FactoryGirl.create(:build) }
 
@@ -11,7 +17,7 @@ describe "Build Pages" do
         fill_in "Title", with: build.title
 	fill_in "Body", with:  build.body
 
-	click_button "Submit"
+	click_button "Create Build"
       end
     end
   end
