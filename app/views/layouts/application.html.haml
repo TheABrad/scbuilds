@@ -6,9 +6,11 @@
   =csrf_meta_tags
   %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1'}
 %body
-  = render partial: 'layouts/header'
-  = render partial: 'shared/flash_messages', flash: flash
-  = yield
+  .container
+    = render partial: 'layouts/header'
+    = render partial: 'shared/flash_messages', flash: flash
+    %section.content
+      = yield
 
 
 

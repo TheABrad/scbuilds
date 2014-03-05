@@ -1,2 +1,26 @@
-@import "bootstrap"
+@import "bootstrap";
+@import "colors";
+
+body {
+  background-color: $background_color; 
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+.content {
+  background-color: $content_color;
+  color: $content_text_color;
+  padding: 15px;
+}
+
+
+
+
+
+
+
 
