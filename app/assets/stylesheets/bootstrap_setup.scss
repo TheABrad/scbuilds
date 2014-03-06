@@ -1,5 +1,9 @@
-@import "bootstrap";
 @import "colors";
+
+$navbar-default-bg: $navbar_background_color; 
+$navbar-default-link-color: $navbar_link_color;
+$navbar-default-link-active-color: $navbar_link_color;
+@import "bootstrap";
 
 body {
   background-color: $background_color; 
