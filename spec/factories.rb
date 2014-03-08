@@ -9,5 +9,7 @@ FactoryGirl.define do
   factory :build do
     sequence(:title) { |n| "Title #{n}" }
     body "Lorem Ipsum"
+    replays "Lorem Ipsum Sid"
+
   end
 end

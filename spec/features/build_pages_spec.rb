@@ -16,6 +16,8 @@ describe "Build Pages" do
       it "fill's in the build with correct information" do
         fill_in "Title", with: build.title
 	fill_in "Body", with:  build.body
+	fill_in "Replays", with: build.replays
+
 
 	click_button "Create Build"
       end
