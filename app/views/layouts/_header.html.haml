@@ -3,6 +3,8 @@
     .navbar-header
       = link_to "SCBuilds", root_path, class: "navbar-brand"
     .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li= link_to "BUILDS", builds_path
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li= link_to current_user.username, '#'

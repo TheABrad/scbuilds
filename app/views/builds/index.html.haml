@@ -1,4 +1,6 @@
-%h1 Builds 
+%h1 Builds
+- if user_signed_in?
+  = link_to "Add a New Build", new_build_path
 %ul.nav.nav-pills
   %li.dropdown
     %a{:id => "drop3", :role => "button", "data-toggle" => "dropdown", :href => "#"}
