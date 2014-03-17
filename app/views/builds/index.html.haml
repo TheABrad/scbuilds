@@ -1,40 +1,13 @@
 %h1 Builds
 - if user_signed_in?
   = link_to "Add a New Build", new_build_path
-%ul.nav.nav-pills
-  %li.dropdown
-    %a{:id => "drop3", :role => "button", "data-toggle" => "dropdown", :href => "#"}
-      Protoss
-      %b.caret 
-    %ul{:id => "menu1", :class => "dropdown-menu", :role => "menu", "aria-labelledby" => "drop3"}
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Protoss vs. Protoss 
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Protoss vs. Terran
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Protoss vs. Zerg 
-  %li.dropdown
-    %a{:id => "drop3", :role => "button", "data-toggle" => "dropdown", :href => "#"}
-      Terran 
-      %b.caret 
-    %ul{:id => "menu1", :class => "dropdown-menu", :role => "menu", "aria-labelledby" => "drop3"}
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Terran vs. Protoss 
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Terran vs. Terran
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Terran vs. Zerg 
-  %li.dropdown
-    %a{:id => "drop3", :role => "button", "data-toggle" => "dropdown", :href => "#"}
-      Zerg 
-      %b.caret 
-    %ul{:id => "menu1", :class => "dropdown-menu", :role => "menu", "aria-labelledby" => "drop3"}
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Zerg vs. Protoss 
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Zerg vs. Terran
-      %li{:role => "presentation"}
-        %a{:role => "menuitem", :tabindex => "-1", :href => "#"}Zerg vs. Zerg 
-
-
-= render @builds
+= render 'search'
+= @builds.each do |build|
+  .media
+    %span
+      %a.pull-left{:href => "#"}
+        %img.media-object{:src => "...", :alt => "RACE"}
+        vs.
+        %img.media-object{:src => "...", :alt => "RACE"}
+  .media-body
+    %h4.media-heading= link_to build.title, build
