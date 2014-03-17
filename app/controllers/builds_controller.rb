@@ -15,6 +15,7 @@ class BuildsController < ApplicationController
 
   def create
     @build = Build.new(build_params)
+    @build.user_id = current_user.id
     if @build.save
       flash[:success] = "Build Created!"
       redirect_to @build
