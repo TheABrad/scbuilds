@@ -1,13 +1,11 @@
 %h1 Builds
 - if user_signed_in?
-  = link_to "Add a New Build", new_build_path
+  %small= link_to "Add a New Build", new_build_path
 = render 'search'
-= @builds.each do |build|
-  .media
-    %span
+%ul.media-list
+  - @builds.each do |build|
+    %li.media
       %a.pull-left{:href => "#"}
-        %img.media-object{:src => "...", :alt => "RACE"}
-        vs.
-        %img.media-object{:src => "...", :alt => "RACE"}
-  .media-body
-    %h4.media-heading= link_to build.title, build
+        %img.media-object{:src => "/race.jpg", :alt => "RACE"}
+    .media-body
+      %h4.media-heading= link_to build.title, build

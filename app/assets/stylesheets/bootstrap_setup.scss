@@ -21,7 +21,13 @@ body {
   padding: 15px;
 }
 
-
+.search-bar {
+  background-color: $search_bar_color;
+  color: $search_bar_text_color;
+  padding: 20px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
 
 
 
