@@ -14,4 +14,10 @@ module ApplicationHelper
         flash_type.to_s
     end
   end
+
+  def markdown(text)
+    renderer = Redcarpet::Render::HTML.new(:hard_wrap => true)
+    markdown = Redcarpet::Markdown.new(renderer, :autolink => true)
+    markdown.render(text).html_safe
+  end
 end

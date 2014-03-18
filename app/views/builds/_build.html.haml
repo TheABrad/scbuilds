@@ -1,8 +1,10 @@
 %h1= build.title
-%p= build.body
+= markdown(build.body)
 %br
-%h3 Replays/VODs
-%p= build.replays
+- unless build.replays.empty?
+  %h3 Replays/VODs
+  = markdown(build.replays)
 %br
-= link_to 'Edit', edit_build_path(build)
-= link_to 'Delete', build, method: :delete, data: { confirm: 'Are you sure you want to delete this?' }
+- if current_user
+  = link_to 'Edit', edit_build_path(build)
+  = link_to 'Delete', build, method: :delete, data: { confirm: 'Are you sure you want to delete this?' }
