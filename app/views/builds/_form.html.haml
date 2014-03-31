@@ -2,7 +2,8 @@
   = f.inputs do
     = f.input :title
     = f.input :race, :as => :select, :collection => ["Protoss","Terran","Zerg"]
-    = f.input :body
+    = f.input :vs_race, :as => :select, :collection => ["Protoss","Terran","Zerg"]
+    = f.input :body 
     = f.input :replays
   = f.actions do
     = f.action :submit, :as => :button
