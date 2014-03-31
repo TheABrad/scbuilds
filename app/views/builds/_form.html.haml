@@ -1,6 +1,7 @@
 = semantic_form_for @build do |f|
   = f.inputs do
     = f.input :title
+    = f.input :race, :as => :select, :collection => ["Protoss","Terran","Zerg"]
     = f.input :body
     = f.input :replays
   = f.actions do
