@@ -3,4 +3,6 @@ class Build < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true
   validates_inclusion_of :race, in: %w( Protoss Terran Zerg), message: "please pick a race"
   validates :body, presence: true
+
+  scope :recent, order("builds.created_at DESC")
 end
