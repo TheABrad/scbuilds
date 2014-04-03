@@ -7,7 +7,7 @@ class Build < ActiveRecord::Base
   
   validates :body, presence: true
 
-  scope :recent, order("builds.created_at DESC")
+  scope :recent, -> { order("builds.created_at DESC") }
 
   def matchup
     self.race[0] + "v" + self.vs_race[0]
