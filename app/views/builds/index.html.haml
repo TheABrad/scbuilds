@@ -2,10 +2,13 @@
 - if user_signed_in?
   %small= link_to "Add a New Build", new_build_path
 = render 'search'
-%ul.media-list
-  - @builds.each do |build|
-    %li.media
-      %a.pull-left{:href => "#"}
-        %img.media-object{:src => "/race.jpg", :alt => "RACE"}
-    .media-body
-      %h4.media-heading= link_to build.title, build
+%table.table
+  %thead
+    %tr
+      %th Race
+      %th Build 
+  %tbody
+    - @builds.each do |build|
+      %tr
+        %td= build.race
+        %td= link_to build.title, build
