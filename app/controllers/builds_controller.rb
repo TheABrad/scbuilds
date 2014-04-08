@@ -6,7 +6,7 @@ class BuildsController < ApplicationController
   end
 
   def show
-    @build = Build.find(params[:id])
+    @build = Build.friendly.find(params[:id])
   end
 
   def new
@@ -25,11 +25,11 @@ class BuildsController < ApplicationController
   end
 
   def edit
-    @build = Build.find(params[:id])
+    @build = Build.friendly.find(params[:id])
   end
 
   def update
-    @build = Build.find(params[:id])
+    @build = Build.friendly.find(params[:id])
 
     if @build.update(build_params)
       flash[:success] = "Build Updated!"
@@ -40,7 +40,7 @@ class BuildsController < ApplicationController
   end
 
   def destroy
-    @build = Build.find(params[:id])
+    @build = Build.friendly.find(params[:id])
     @build.destroy
     redirect_to build_path
   end

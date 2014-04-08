@@ -64,6 +64,8 @@ GEM
       actionpack (>= 3.0)
     formtastic-bootstrap (3.0.0)
       formtastic (>= 2.2)
+    friendly_id (5.0.3)
+      activerecord (>= 4.0.0)
     haml (4.0.1)
       tilt
     haml-rails (0.5.3)
@@ -178,6 +180,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.4.1)
   formtastic
   formtastic-bootstrap
+  friendly_id (~> 5.0.0)
   haml
   haml-rails
   jbuilder (~> 1.2)
