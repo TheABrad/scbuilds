@@ -6,9 +6,11 @@
   %thead
     %tr
       %th Race
+      %th Matchup
       %th Build 
   %tbody
     - @builds.each do |build|
       %tr
         %td= build.race
+        %td= build.matchup
         %td= link_to build.title, build
