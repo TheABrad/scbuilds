@@ -5,9 +5,9 @@
 %table.table
   %thead
     %tr
-      %th Race
+      %th= sort_link @search, :race, "Race"
       %th Matchup
-      %th Build 
+      %th= sort_link @search, :title, "Build" 
   %tbody
     - @builds.each do |build|
       %tr

@@ -2,11 +2,9 @@ class BuildsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
 
   def index
-    if params[:race]
-      @builds = Build.where(race: params[:race]).load.recent 
-    else
-      @builds = Build.where(true).load.recent
-    end
+    @search = Build.search(params[:q])
+    @builds = @search.result(distinct: true) 
+
   end
 
   def show
