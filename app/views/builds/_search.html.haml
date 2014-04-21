@@ -1,6 +1,6 @@
 .search-bar
-  %span
-    = link_to "Protoss", builds_path + "?race=Protoss" 
-    = link_to "Terran", builds_path + "?race=Terran" 
-    = link_to "Zerg", builds_path + "?race=Zerg" 
+  = search_form_for @search do |f|
+    = f.label :title_cont
+    = f.text_field :title_cont
+    = f.submit
 
