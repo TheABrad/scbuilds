@@ -1,9 +1,16 @@
-$background_color: #171616;
+/* colors */
+$white: #f0f0f0;
+$black: #111010;
+$gray: #cacaca;
+$starcraft_blue: #528DD3;
+
+/* section and text colors */
+$background_color: $gray;
 $navbar_background_color: #252525;
 $navbar_link_color: #f0f0f0;
-$content_color: #111010;
-$content_text_color: #f0f0f0;
-$starcraft_blue: #528DD3;
+$content_color: $white;
+$content_text_color: $black;
+
 
 /* Race Colors */
 $protoss_color:#FDE142;
