@@ -1,6 +1,16 @@
 .search-bar
   = search_form_for @search do |f|
-    = f.label :title_cont
-    = f.text_field :title_cont
-    = f.submit
+    .field
+      = f.radio_button :race_eq, 'Protoss'
+      = f.label :race_eq, "Protoss"
+      = f.radio_button :race_eq, 'Terran'
+      = f.label :race_eq, "Terran"
+      = f.radio_button :race_eq, 'Zerg'
+      = f.label :race_eq, "Zerg"
+    .field 
+      = f.label :title_cont
+      = f.text_field :title_cont
+    .actions
+      = f.submit class: "btn btn-primary"
+      = link_to "Reset", builds_path, class: "btn"
 
