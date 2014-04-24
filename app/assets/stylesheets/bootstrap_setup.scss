@@ -11,6 +11,10 @@ body {
   font-family: 'Open Sans', 'sans-serif';
 }
 
+input, select, textarea {
+  color: $black;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 850px;
@@ -21,6 +25,7 @@ body {
   background-color: $content_color;
   color: $content_text_color;
   padding: 15px;
+
 }
 
 .search-bar {
