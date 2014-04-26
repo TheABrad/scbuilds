@@ -1,5 +1,10 @@
 Scbuilds::Application.routes.draw do
-  resources :builds 
+  resources :builds do
+    member do
+      put 'like', to: 'builds#upvote'
+      put 'dislike', to: 'builds#downvote'
+    end
+  end
   devise_for :users
   
   

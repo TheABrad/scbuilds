@@ -1,5 +1,6 @@
 class Build < ActiveRecord::Base
   extend FriendlyId
+  acts_as_votable
   
   friendly_id :title, use: :slugged
 

@@ -8,6 +8,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'font-awesome-rails'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -25,6 +27,8 @@ gem 'friendly_id', '~> 5.0.0'
 
 # Ransack Table Sorting
 gem 'ransack', github: "activerecord-hackery/ransack", branch: "rails-4"
+
+gem 'acts_as_votable', '~> 0.8.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'

@@ -47,6 +47,17 @@ class BuildsController < ApplicationController
     redirect_to build_path
   end
 
+  def upvote
+    @build = Build.friendly.find(params[:id])
+    @build.liked_by current_user
+    redirect_to @build
+  end
+
+  def downvote
+    @build = Build.friendly.find(params[:id])
+    @build.downvote_from current_user
+    redirect_to @build
+  end
   private
 
   def build_params 

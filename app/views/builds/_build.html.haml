@@ -3,7 +3,10 @@
   - if user_signed_in? && current_user.id == build.user_id
     = link_to 'Edit', edit_build_path(build)
     = link_to 'Delete', build, method: :delete, data: { confirm: 'Are you sure you want to delete this?' }
-
+  %br
+  %span
+    = link_to (fa_icon "thumbs-up 2x"), like_build_path(@build), method: :put 
+    = link_to (fa_icon "thumbs-down 2x"), dislike_build_path(@build), method: :put
 = markdown(build.body)
 %br
 - unless build.replays.empty?
