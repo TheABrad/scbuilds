@@ -8,9 +8,11 @@
       %th= sort_link @search, :race, "Race"
       %th Matchup
       %th= sort_link @search, :title, "Build" 
+      %th Rating
   %tbody
     - @builds.each do |build|
       %tr
         %td= build.race
         %td= build.matchup
         %td= link_to build.title, build
+        %td= fa_icon "angle-double-up", text: build.votes.size 
