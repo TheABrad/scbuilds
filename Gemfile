@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'ransack', github: "activerecord-hackery/ransack", branch: "rails-4"
 
 gem 'acts_as_votable', '~> 0.8.0'
+gem 'acts-as-taggable-on'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'

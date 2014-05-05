@@ -3,12 +3,13 @@ class BuildsController < ApplicationController
 
   def index
     @search = Build.search(params[:q])
-    @builds = @search.result(distinct: true) 
+    @builds = @search.result(distinct: true)
 
   end
 
   def show
     @build = Build.friendly.find(params[:id])
+    @related_builds = Build.where('builds.id != ?', @build.id).where(race: @build.race).take(3)
   end
 
   def new
