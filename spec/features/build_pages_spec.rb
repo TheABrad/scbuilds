@@ -13,12 +13,12 @@ describe "Build Pages" do
     let(:build) { FactoryGirl.create(:build) }
 
     describe "Fill in Build" do
-      it "fill's in the build with correct information" do
+      it "fill's in the build with correct information" do 
+        select('Protoss', :from => "Race") 
+        select('Terran', :from => "Vs Race") 
         fill_in "Title", with: build.title
-        select("Protoss", :from => "build_race") 
-        select("Terran", :from => "build_vs_race") 
-        fill_in "Body", with:  build.body 
-	fill_in "Replays", with: build.replays
+        fill_in "Body", with:  build.body  
+	    fill_in "Replays", with: build.replays
        
        	click_button "Create Build"
       end

@@ -1,8 +1,8 @@
 = semantic_form_for @build do |f|
   = f.inputs do
     = f.input :title
-    = f.input :race, :as => :select, :collection => ["Protoss","Terran","Zerg"]
-    = f.input :vs_race, :as => :select, :collection => ["Protoss","Terran","Zerg"]
+    = f.input :race, :label => "Race", :as => :select, :collection => ["Protoss","Terran","Zerg"]
+    = f.input :vs_race, :label => "Vs Race", :as => :select, :collection => ["Protoss","Terran","Zerg"]
     = f.input :body 
     = f.input :replays
   = f.actions do
