@@ -1,4 +1,5 @@
 Scbuilds::Application.routes.draw do
+  
   resources :builds do
     member do
       put 'like', to: 'builds#upvote'
@@ -6,6 +7,7 @@ Scbuilds::Application.routes.draw do
     end
   end
   devise_for :users
+  resources :users
   
   
  

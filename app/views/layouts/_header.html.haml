@@ -7,7 +7,7 @@
         %li= link_to "BUILDS", builds_path
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          %li= link_to current_user.username, '#'
+          %li= link_to current_user.username, current_user 
           %li= link_to (fa_icon "sign-out") + " LOGOUT", destroy_user_session_path, :method => :delete
         - else
           %li= link_to (fa_icon "sign-in") + " LOGIN", new_user_session_path
