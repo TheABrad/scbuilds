@@ -7,7 +7,7 @@ class BuildsController < ApplicationController
 
   end
 
-  def show
+  def show 
     @build = Build.friendly.find(params[:id])
     @related_builds = Build.where('builds.id != ?', @build.id).where(race: @build.race).take(3)
   end

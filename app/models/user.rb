@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :builds
+  has_many :builds, dependent: :destroy
 
   def should_generate_new_friendly_id?
     new_record? || slug.nil? || slug.blank?

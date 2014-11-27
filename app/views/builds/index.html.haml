@@ -8,6 +8,7 @@
       %th= sort_link @search, :race, "Race"
       %th Matchup
       %th= sort_link @search, :title, "Build" 
+      %th= sort_link @search, :user_id, "Author"
       %th= sort_link @search, :vote_weight, "Rating"
   %tbody
     - @builds.each do |build|
@@ -15,4 +16,5 @@
         %td= build.race
         %td= build.matchup
         %td= link_to build.title, build
+        %td= link_to build.user.username, user_path(build.user.username) 
         %td= build.votes.size 

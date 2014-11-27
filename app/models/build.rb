@@ -5,7 +5,7 @@ class Build < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   belongs_to :user
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true, uniqueness: true 
 
   VALID_RACES = %w(Protoss Terran Zerg)
   validates_inclusion_of :race, :vs_race, in: VALID_RACES , message: "Please pick a race."
