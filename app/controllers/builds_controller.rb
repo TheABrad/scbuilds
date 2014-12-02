@@ -62,6 +62,6 @@ class BuildsController < ApplicationController
   private
 
   def build_params 
-    params[:build].permit(:title, :race, :vs_race, :body, :replays)
+    params[:build].permit(:title, :race, :vs_race, :build_type, :body, :replays)
   end
 end

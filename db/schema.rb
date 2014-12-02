@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126203159) do
+ActiveRecord::Schema.define(version: 20141202231634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20141126203159) do
     t.string   "race"
     t.string   "vs_race"
     t.string   "slug"
+    t.string   "build_type"
   end
 
   add_index "builds", ["slug"], name: "index_builds_on_slug", unique: true, using: :btree

@@ -15,6 +15,7 @@ describe 'Build Pages' do
         fill_in 'Title', with: 'TitleBuild'
         choose 'build_race_protoss'
         choose 'build_vs_race_terran'
+        select('Macro', from: 'build_build_type')
         fill_in 'Body', with: 'Lorem Ipsum'
         fill_in 'Replays', with: 'http://drop.sc/11111'
 

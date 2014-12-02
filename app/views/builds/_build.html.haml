@@ -10,6 +10,10 @@
   %span
     = link_to (fa_icon "thumbs-up 2x"), like_build_path(@build), method: :put 
     = link_to (fa_icon "thumbs-down 2x"), dislike_build_path(@build), method: :put
+%p
+  Build Type:
+  = build.build_type
+
 = markdown(build.body)
 %br
 - unless build.replays.empty?
