@@ -1,9 +1,12 @@
 @import "colors";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-$navbar-default-bg: $navbar_background_color; 
+$navbar-default-bg: $navbar_background_color;
 $navbar-default-link-color: $navbar_link_color;
 $navbar-default-link-active-color: $navbar_link_color;
+$navbar-default-link-hover-color: $navbar_link_color;
+
+$input-color: $black;
 @import "bootstrap";
 
 body {
@@ -16,10 +19,6 @@ body {
   font-family: 'Open Sans', 'sans-serif';
 }
 
-input, select, textarea {
-  color: $black;
-}
-
 @media (min-width: 768px) {
   .container {
     max-width: 850px;
@@ -30,7 +29,6 @@ input, select, textarea {
   background-color: $content_color;
   color: $content_text_color;
   padding: 15px;
-
 }
 
 .search-bar {
